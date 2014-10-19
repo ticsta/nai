@@ -1,0 +1,15 @@
+<body>
+  <% var temp="variable" %>
+<div>
+  <%- "Ion &*^8" %><span>, </span>
+  <%="Vasile" %>
+</div>
+<%+ getUsers().then(function(result){ %>
+  <p>
+    <%=result %>, <%=temp %>
+  </p>
+<% }) %>
+  <p>
+    <%=temp %>
+  </p>
+</body>

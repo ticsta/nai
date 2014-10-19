@@ -1,15 +1,26 @@
 {
-  "name": "jste",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nai",
+  "version": "0.0.1",
+  "description": "NAI - simple async js template engine",
+  "main": "./lib/nai",
   "dependencies": {
     "bluebird": "^2.3.6"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
+  "keywords": [
+    "nai",
+    "js",
+    "async",
+    "template"
+  ],
   "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ournet/nai/issues"
+  },
+  "homepage": "https://github.com/Ournet/nai",
   "license": "ISC"
 }
