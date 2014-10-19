@@ -1,0 +1,55 @@
+<html>
+  <% function getTitle() {
+    if(document && document.title)
+      return document.title;
+    else
+      return site.title;
+    } %>
+  <head>
+    <title>
+      <%= getTitle() %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="<%= asset_src('css_main') %>">
+  </head>
+
+  <body>
+    <div id="wrap" class="container">
+      <div class="ban" id="page-top-banner">
+      </div>
+      <div id="page-content">
+        <div class="row">
+          <div class="col-md-8 col-ms-12">
+            <div>
+              Index
+            </div>
+            <% var list=[ {name: 'ion'},{name: 'vasile'}]; %>
+              <ul>
+                <% list.forEach(function(item){ %>
+                  <p>
+                    <%= item.name %>
+                  </p>
+                  <% }) %>
+              </ul>
+          </div>
+          <div class="col-md-4 col-ms-12">
+            <%+ da.news.latestNews().then(function(rows){ %>
+              <ul class="list ot-news-item">
+                <% rows.forEach(function(doc){ %>
+                  <li class="list-item">
+                    <div class="item">
+                      <a href="<%= doc_url(doc) %>">
+                        <h3>
+                          <%= doc.title %>
+                        </h3>
+                      </a>
+                    </div>
+                  </li>
+                  <% }) ('end forEach') %>
+              </ul>
+              <% }) ('end async') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
