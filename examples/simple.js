@@ -8,7 +8,7 @@ nai.renderFile(__dirname+'/simple.html', {
       return new Promise(function(resolve) {
         setTimeout(function() {
           resolve("fraier 10!!!");
-        }, 1);
+        }, 10);
       });
     }
   }

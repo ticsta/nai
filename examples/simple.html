@@ -12,4 +12,9 @@
   <p>
     <%=temp %>
   </p>
+<%+ getUsers().then(function(result){ %>
+  <h1>
+    <%=result %>
+  </h1>
+<% }) %>
 </body>

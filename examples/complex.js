@@ -1,14 +1,32 @@
 var nai = require('../lib/nai'),
   Promise = require('bluebird');
 
-nai.renderFile(__dirname+'/complex.html', {
+nai.renderFile(__dirname + '/complex.html', {
   locals: {
-    getUsers: function() {
-      return new Promise(function(resolve) {
-        setTimeout(function() {
-          resolve("fraier 10!!!");
-        }, 1);
-      });
+    document: {
+
+    },
+    site: {
+      title: 'site title'
+    },
+    asset_src: function(name) {
+      return '//' + name;
+    },
+    doc_url: function(name) {
+      return '//' + name;
+    },
+    da: {
+      news: {
+        latestNews: function() {
+          return new Promise(function(resolve) {
+            setTimeout(function() {
+              resolve([{
+                title: "title"
+              }]);
+            }, 1);
+          });
+        }
+      }
     }
   }
 })
