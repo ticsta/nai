@@ -17,10 +17,9 @@
     "template"
   ],
   "author": "Dumitru Cantea",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ournet/nai/issues"
   },
   "homepage": "https://github.com/Ournet/nai",
-  "license": "ISC"
 }
