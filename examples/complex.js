@@ -2,6 +2,7 @@ var nai = require('../lib/nai'),
   Promise = require('bluebird');
 
 nai.renderFile(__dirname + '/complex.html', {
+  debug: true,
   locals: {
     document: {
 

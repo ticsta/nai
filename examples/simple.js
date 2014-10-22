@@ -3,12 +3,14 @@ var nai = require('../lib/nai'),
 
 
 nai.renderFile(__dirname+'/simple.html', {
+  debug: true,
   locals: {
     getUsers: function() {
       return new Promise(function(resolve) {
+        var time = getRandomInt(10, 2000);
         setTimeout(function() {
-          resolve("fraier 10!!!");
-        }, 10);
+          resolve("waiting for "+time+" ms");
+        }, time);
       });
     }
   }
@@ -16,3 +18,7 @@ nai.renderFile(__dirname+'/simple.html', {
   .then(function(result) {
     console.log(result);
   });
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
