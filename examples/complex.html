@@ -34,6 +34,7 @@
           <div class="col-md-4 col-ms-12">
             <%+ da.news.latestNews().then(function(rows){ %>
               <ul class="list ot-news-item">
+                <%= rows.length %>
                 <% rows.forEach(function(doc){ %>
                   <li class="list-item">
                     <div class="item">

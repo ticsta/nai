@@ -1,5 +1,5 @@
 
-# NAI - simple asynchronous templates for node
+# nai: Simple asynchronous templates for node
 
 ## Install
 

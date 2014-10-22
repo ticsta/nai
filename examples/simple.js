@@ -16,6 +16,7 @@ nai.renderFile(__dirname+'/simple.html', {
   }
 })
   .then(function(result) {
+    console.log('==================');
     console.log(result);
   });
 

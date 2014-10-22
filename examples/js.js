@@ -10,5 +10,6 @@ nai.renderFile(__dirname + '/js.html', {
   }
 })
   .then(function(result) {
+    console.log('==================');
     console.log(result);
   });

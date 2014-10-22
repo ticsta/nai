@@ -1,7 +1,7 @@
 {
   "name": "nai",
-  "version": "0.0.5",
-  "description": "NAI - simple asynchronous templates for node",
+  "version": "0.0.6",
+  "description": "Simple asynchronous templates for node",
   "main": "./lib/nai",
   "dependencies": {
     "bluebird": "^2.3.6"
