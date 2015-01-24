@@ -13,7 +13,7 @@ npm install nai;
 <% if (user) { %>
   <h2><%= user.name %></h2>
 <% } %>
-<%+ db.getUsers().then(function(users){ %>
+<% db.getUsers().then(function(users){ %>
 <div><%- users.length %> users</div>
 <% }) %>
 ```
@@ -24,7 +24,7 @@ See examples folder.
 1. `<% code %>` - any JavaScript code: `<% var title = 'My Title' %>`;
 2. `<%= variable %>` - encoded output;
 3. `<%- variable %>` - NOT encoded output;
-3. `<%+ callAsync().then(... %>` - async block.
+3. `<% callAsync().then(function(... %>` - async block - works only with Promise.
 
 
 ## License

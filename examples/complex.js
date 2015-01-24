@@ -2,7 +2,7 @@ var nai = require('../lib/nai'),
   Promise = require('bluebird');
 
 nai.renderFile(__dirname + '/complex.html', {
-    //debug: true,
+    debug: false,
     locals: {
       document: {
 
@@ -13,8 +13,8 @@ nai.renderFile(__dirname + '/complex.html', {
       asset_src: function(name) {
         return '//' + name;
       },
-      doc_url: function(name) {
-        return '//' + name;
+      doc_url: function(doc) {
+        return '//' + doc.title;
       },
       da: {
         news: {
@@ -36,6 +36,6 @@ nai.renderFile(__dirname + '/complex.html', {
     }
   })
   .then(function(result) {
-    console.log('==================');
+    console.log('=============== RESULT: ');
     console.log(result);
   });
