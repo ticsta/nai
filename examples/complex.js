@@ -2,7 +2,7 @@ var nai = require('../lib/nai'),
   Promise = require('bluebird');
 
 nai.renderFile(__dirname + '/complex.html', {
-    debug: false,
+    debug: true,
     locals: {
       document: {
 
@@ -22,7 +22,8 @@ nai.renderFile(__dirname + '/complex.html', {
             return new Promise(function(resolve) {
               setTimeout(function() {
                 resolve([{
-                  title: "title1"
+                  title: "title1",
+                  id: 1
                 }, {
                   title: "title2"
                 }, {

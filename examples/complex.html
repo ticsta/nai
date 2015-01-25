@@ -28,7 +28,12 @@
                   <p>
                     <%= item.name %>
                   </p>
-                  <% }) %>
+                  <% if(item.name=='ion') { %>
+                    <strong>ION!</strong>
+                  <% }else{ %>
+                    <i>NO ion :(</i>
+                  <% } %>
+                <% }) %>
               </ul>
           </div>
           <div class="col-md-4 col-ms-12">
@@ -43,6 +48,11 @@
                           <%= doc.title %>
                         </h3>
                       </a>
+                      <% if(doc.id){ %>
+                        <p><%- doc.id %></p>
+                      <% }else{ %>
+                        <p>No id!</p>
+                      <% } %>
                     </div>
                   </li>
                   <% }) %>
