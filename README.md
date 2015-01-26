@@ -1,10 +1,18 @@
 
 # nai: Simple asynchronous templates for node
 
-## Install
+## Usage
 
 ```
 npm install nai;
+
+nai.render(str, options).then(function(output){
+  // output
+});
+
+nai.renderFile(path, options).then(function(output){
+  // output
+});
 ```
 
 ## Example
@@ -21,10 +29,17 @@ See examples folder.
 
 ## Syntax
 
-1. `<% code %>` - any JavaScript code: `<% var title = 'My Title' %>`;
-2. `<%= variable %>` - encoded output;
-3. `<%- variable %>` - NOT encoded output;
+1. `<% code %>` - any JavaScript code: `<% var title = 'My Title' %>` - no output;
+2. `<%= variable %>` - Escapes html output;
+3. `<%- variable %>` - Unescaped output;
 3. `<% callAsync().then(function(... %>` - async block - works only with Promise.
+
+## Options
+
+- `debug` Output generated function body;
+- `open` Open tag, defaulting to "<%";
+- `close` Closing tag, defaulting to "%>";
+- `locals` Template-local variables.
 
 
 ## License
