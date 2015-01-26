@@ -1,10 +1,12 @@
 
 # nai: Simple asynchronous templates for node
 
+Build for Asynchronous templates
+
 ## Usage
 
 ```
-npm install nai;
+var nai = require('nai');
 
 nai.render(str, options).then(function(output){
   // output
