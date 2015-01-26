@@ -28,6 +28,9 @@ nai.renderFile(__dirname + '/hierarchy.html', {
             resolve(data[key]);
           }, Math.random() * 1200);
         });
+      },
+      getData: function(){
+        return data;
       }
     }
   })

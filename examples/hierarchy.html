@@ -16,5 +16,15 @@
     <%})%>
   <%})%>
 </ul>
+<ul>
+  <% Object.keys(getData()).forEach(function(key){ %>
+    <li>
+      <h4>Key=<%= key %></h4>
+      <% getValue(key).then(function(value){ %>
+        <p>Name=<%= value.name %></p>
+      <%})%>
+    </li>
+  <%})%>
+</ul>
 </body>
 </html>
