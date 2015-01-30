@@ -1,5 +1,5 @@
 
-# nai: Simple asynchronous templates for node
+# Simple asynchronous template engine for node
 
 Build for Asynchronous templates
 
@@ -14,6 +14,15 @@ nai.render(str, options).then(function(output){
 
 nai.renderFile(path, options).then(function(output){
   // output
+});
+
+var compiledFn = nai.compile('<html>', options);
+
+compiledFn({title: 'Title 1'}).then(function(output){
+  
+});
+compiledFn({title: 'Title 2'}).then(function(output){
+  
 });
 ```
 
@@ -38,10 +47,11 @@ See examples folder.
 
 ## Options
 
-- `debug` Output generated function body;
-- `open` Open tag, defaulting to "<%";
-- `close` Closing tag, defaulting to "%>";
-- `locals` Template-local variables.
+- `debug` (Boolean) Output generated function body;
+- `open` (String) Open tag, defaulting to "<%";
+- `close` (String) Closing tag, defaulting to "%>";
+- `locals` (Object) Template-local variables.
+- `[vm](http://nodejs.org/api/vm.html#vm_vm_runinnewcontext_code_sandbox_filename)` (Boolean) Execute in a new context - more secure.
 
 
 ## License

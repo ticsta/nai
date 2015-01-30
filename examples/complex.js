@@ -3,6 +3,7 @@ var nai = require('../lib/nai'),
 
 nai.renderFile(__dirname + '/complex.html', {
     debug: true,
+    //vm: true,
     locals: {
       document: {
 
